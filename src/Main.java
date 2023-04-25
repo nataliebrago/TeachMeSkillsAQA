@@ -1,7 +1,10 @@
 public class Main {
-    //Домашнее задание 1
+    /*My
+      homework1
+     */
     public static void main(String[] args) {
-        //Выводим значение Hello world! в консоль
-        System.out.printf("Hello world!");
+        //this comment includes my name and surname
+        System.out.println("Natalie" + " " + "Brago" + ".Welcome " +
+                "to my house.");
     }
 }
