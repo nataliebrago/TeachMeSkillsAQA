@@ -28,14 +28,14 @@ public class Main {
         double weight = 88.1;
         char symbol = 'A';
 
-
+        System.out.println();
         System.out.println("    |    |");
         System.out.println("____|____|____");
         System.out.println("    |    |");
         System.out.println("____|____|____");
         System.out.println("    |    |");
         System.out.println("    |    |");
-
+        System.out.println();
         System.out.println("     *");
         System.out.println("    ***");
         System.out.println("   *****");
