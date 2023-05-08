@@ -3,45 +3,47 @@ import java.util.Scanner;
 public class Main {
      public static void main(String[] args) {
          //Create scanner object
-         Scanner enter = new Scanner(System.in);
+         Scanner scanner = new Scanner(System.in);
+
          //Task1
-         doTask1(enter);
+         outputInfoAboutPeople(scanner);
+
 
          //Task2
          System.out.println("");
          System.out.println("Please enter a character: ");
-         char character = enter.next().charAt(0);
-         doTask2(character);
+         char character = scanner.next().charAt(0);
+         outputCharAndCode(character);
 
          //Task3
          System.out.println("");
          System.out.println("Please enter your weight: ");
-         float weight = enter.nextFloat();
+         float weight = scanner.nextFloat();
 
          System.out.println("Please enter your height: ");
-         float height =  enter.nextFloat();
+         float height =  scanner.nextFloat();
 
-         doTask3(weight,height);
-         enter.close();
+         outputBMI(weight,height);
+         scanner.close();
      }
 
 
-     public static void doTask1( Scanner enter){
+     public static void outputInfoAboutPeople(Scanner scanner){
 
          System.out.println("Please enter your name: ");
-         String name = enter.nextLine();
+         String name = scanner.nextLine();
 
          System.out.println("Please enter your surname: ");
-         String surname = enter.nextLine();
+         String surname = scanner.nextLine();
 
          System.out.println("Please enter your weight: ");
-         float weight = enter.nextFloat();
+         float weight = scanner.nextFloat();
 
          System.out.println("Please enter your age: ");
-         int age =  enter.nextInt();
+         int age =  scanner.nextInt();
 
          System.out.println("Please enter your height: ");
-         float height =  enter.nextFloat();
+         float height =  scanner.nextFloat();
 
          System.out.println("");
          System.out.println("Your name is:" + name );
@@ -51,14 +53,13 @@ public class Main {
          System.out.println("Your height is:" + height );
      }
 
-     public static void doTask2(char character){
-         int characterInt =  (int) character;
+     public static void outputCharAndCode(char character){
+         int characterInt = character;
          System.out.println("Character is :" +  character + " - " + characterInt);
     }
 
-    public static void doTask3(float weight, float height){
-
-         float bmi = weight / ( (height /100) * (height /100));
+    public static void outputBMI(float weight, float height){
+         double bmi = weight / ( (height /100) * (height /100));
          System.out.println("BMI is :" +  bmi + " kg/m2");
 
     }
